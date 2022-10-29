@@ -17,6 +17,19 @@ return new class extends Migration
             $table->increments('id');
             $table->string('SKU');
             $table->string('name');
+            $table->string('price');
+            $table->string('old_price');
+            $table->string('discount');
+            $table->text('description');
+            $table->string('vendor');
+            $table->string('type');
+            $table->string('barcode');
+            $table->string('weight');
+            $table->string('tags');
+            $table->string('collections');
+            $table->string('img');
+            $table->string('images');
+            $table->string('reviews')->default([]);
             $table->timestamps();
         });
     }
