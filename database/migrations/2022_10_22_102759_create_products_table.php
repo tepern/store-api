@@ -30,6 +30,9 @@ return new class extends Migration
             $table->string('img');
             $table->string('images');
             $table->string('reviews')->default([]);
+            $table->SoftDeletes();
+            $table->boolean('bestseller')->default(true);
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
